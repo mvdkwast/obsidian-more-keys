@@ -1,3 +1,4 @@
 # Obsidian More Keys
 
-Focus note in side-panel.
+- Focus tasks note in side-panel.
+- Maximize, with credit to @cmoskvitin's <https://github.com/cmoskvitin/obsidian-prozen>
