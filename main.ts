@@ -36,6 +36,21 @@ export default class MoreKeysPlugin extends Plugin {
 
 				return true;
 			}
-		})
+		});
+
+		// thanks @chrisgrieser and @0phoff
+		this.addCommand({
+			id: 'toggle-both-sidebars',
+			name: 'Toggle both sidebars',
+			callback: () => {
+				if (this.app.workspace.leftSplit.collapsed && this.app.workspace.rightSplit.collapsed) {
+					this.app.workspace.leftSplit.expand();
+					this.app.workspace.rightSplit.expand();
+				} else {
+					this.app.workspace.leftSplit.collapse();
+					this.app.workspace.rightSplit.collapse();
+				}
+			}
+		});
 	}
 }
