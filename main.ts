@@ -12,6 +12,15 @@ export default class MoreKeysPlugin extends Plugin {
 			}
 		});
 
+		this.addCommand({
+			id: 'recent-files-panel',
+			name: 'Focus recent files panel',
+			callback: () => {
+				// @ts-ignore
+				this.app.workspace.containerEl.querySelector('.workspace-tab-header[aria-label="recent"]').click()
+			}
+		});
+
 		// thanks, @cmoskvitin !
 		this.addCommand({
 			id: 'maximize',
